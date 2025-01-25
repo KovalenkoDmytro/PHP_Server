@@ -76,12 +76,35 @@ function get_nearest_city(array $cities): string
         return $nearest === null || $current['distance'] < $nearest['distance'] ? $current : $nearest;
     }, null);
 
-    // Debug: Show the nearest city to confirm correctness
-    var_dump($nearest_city);
-
     // Return the name of the nearest city if available
     return $nearest_city['name'] ?? '';
 }
 
 
 echo get_nearest_city($cities); // Expected Output: "Calgary"
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PHP Website</title>
+    <link rel="stylesheet" href="assets/style/style.scss">
+</head>
+<body>
+
+<main>
+    <h1><?php echo "Hello, World!"; ?></h1>
+</main>
+
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> My Website. All rights reserved.</p>
+</footer>
+
+<!-- Include scripts -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
